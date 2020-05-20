@@ -1,12 +1,12 @@
 {
-  "name": "gh-pages",
+  "name": "harrison-website",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && git add out/ && git commit -m \"Deploy Next.js to github.io\" && git subtree push --prefix out gh-page master"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy gh-page to github.io\" && git subtree push --prefix out gh-page master"
   },
   "dependencies": {
     "next": "latest",
