@@ -6,62 +6,57 @@ import Link from 'next/link'
 const name = 'Harrison Peng'
 export const siteTitle = 'Harrison\'s Website'
 
-export default function Layout({ children, home }) {
+export default function Layout() {
     return (
         <div className={styles.container}>
-            <Head>
-                <link rel="icon" href="/favicon.ico" />
-                <meta
-                    name="description"
-                    content="Learn how to build a personal website using Next.js"
-                />
-                <meta
-                    property="og:image"
-                    content={`https://og-image.now.sh/${encodeURI(
-                        siteTitle
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                />
-                <meta name="og:title" content={siteTitle} />
-                <meta name="twitter:card" content="summary_large_image" />
-            </Head>
             <header className={styles.header}>
-                {home ? (
-                    <>
-                        <img
-                            src="/images/profile.png"
-                            className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                            alt={name}
-                        />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                        <h2 className={utilStyles.headingMd}>Traveling | Workout | Programming | Reading | Movie | Drama</h2>
-                    </>
-                ) : (
-                        <>
-                            <Link href="/">
-                                <a>
-                                    <img
-                                        src="/images/profile.png"
-                                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                                        alt={name}
-                                    />
-                                </a>
-                            </Link>
-                            <h2 className={utilStyles.headingLg}>
-                                <Link href="/">
-                                    <a className={utilStyles.colorInherit}>{name}</a>
-                                </Link>
-                            </h2>
-                        </>
-                    )}
+                <>
+                    <img
+                        src="/images/profile.png"
+                        className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                        alt={name}
+                    />
+                    <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                    <div className={`${utilStyles.iconImgBlock}`}>
+                        <a href="https://www.facebook.com/profile.php?id=1602457063">
+                            <img
+                                src="/images/Facebook.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="facebook"
+                            />
+                        </a>
+                        <a href="https://www.instagram.com/hao_0423/" target="_blank">
+                            <img
+                                src="/images/Instagram.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="Instagram"
+                            />
+                        </a>
+                        <a href="https://github.com/hichyen1207" target="_blank">
+                            <img
+                                src="/images/Github.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="Github"
+                            />
+                        </a>
+                        <a href="https://www.linkedin.com/in/harrison-peng/" target="_blank">
+                            <img
+                                src="/images/LinkedIn.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="LinkedIn"
+                            />
+                        </a>
+                        <a href="mailto:hichyen1207@gmail.com" target="_blank">
+                            <img
+                                src="/images/email.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="email"
+                            />
+                        </a>
+                    </div>
+                    <p className={utilStyles.headingMd}><b>Traveling | Workout | Programming | Reading | Movie | Drama</b></p>
+                </>
             </header>
-            <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">
-                        <a>← Back to home</a>
-                    </Link>
-                </div>
-            )}
         </div>
     )
 }

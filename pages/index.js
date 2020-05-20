@@ -4,12 +4,15 @@ import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
     return (
-        <Layout home>
+        <Layout>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-                <p>Hello</p>
+
+            </section>
+            <section className={utilStyles.headingMd}>
+                <p>Hello bro</p>
             </section>
         </Layout>
     )
