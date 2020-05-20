@@ -9,10 +9,7 @@ export default function Home() {
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-
-            </section>
-            <section className={utilStyles.headingMd}>
-                <p>Hello bro</p>
+                <p>Hello</p>
             </section>
         </Layout>
     )
