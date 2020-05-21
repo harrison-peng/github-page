@@ -8,8 +8,28 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>Hello</p>
+            <section>
+                <h2 className={`${utilStyles.heading2Xl}`}>Project</h2>
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=1602457063"
+                            target="_blank"
+                            className={utilStyles.headingLg}
+                        >
+                            Spotify
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://t.me/HarrisonPengBot"
+                            target="_blank"
+                            className={utilStyles.headingLg}
+                        >
+                            Telegram Bot
+                        </a>
+                    </li>
+                </ul>
             </section>
         </Layout>
     )

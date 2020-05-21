@@ -18,7 +18,7 @@ export default function Layout({ children }) {
                     />
                     <h1 className={utilStyles.heading2Xl}>{name}</h1>
                     <div className={`${utilStyles.iconImgBlock}`}>
-                        <a href="https://www.facebook.com/profile.php?id=1602457063">
+                        <a href="https://www.facebook.com/profile.php?id=1602457063" target="_blank">
                             <img
                                 src="/images/Facebook.png"
                                 className={`${utilStyles.iconImg}`}
@@ -44,6 +44,13 @@ export default function Layout({ children }) {
                                 src="/images/LinkedIn.png"
                                 className={`${utilStyles.iconImg}`}
                                 alt="LinkedIn"
+                            />
+                        </a>
+                        <a href="https://haofox.wordpress.com/" target="_blank">
+                            <img
+                                src="/images/Wordpress.png"
+                                className={`${utilStyles.iconImg}`}
+                                alt="Wordpress"
                             />
                         </a>
                         <a href="mailto:hichyen1207@gmail.com" target="_blank">
